@@ -5,7 +5,7 @@ To develop:
 
 * For development in Python - version 3.9 with IDLE
 
-* For code versioning - GitHub
+* For code versioning - GitHub w/ GitHub Desktop
   - plans to include CI/CD using GH Actions
 
 * Cloud services - AWS
