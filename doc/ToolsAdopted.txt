@@ -3,7 +3,9 @@ This list will be update each time I change a tool.
 
 To develop:
 
-* For development in Python - version 3.9 with IDLE
+* For development in Python (version 3.9)
+  - VSC
+  - libraries listed in requirements.txt
 
 * For code versioning - GitHub w/ GitHub Desktop
   - plans to include CI/CD using GH Actions
