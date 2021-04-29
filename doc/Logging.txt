@@ -1,0 +1,29 @@
+The logging structure will be as described:
+- A message will be put in an AWS SQS FIFO queue;
+- A service in AWS Lambda will monitor this queue and process the messages;
+- The log will be inserted in a collection in MongoDB.
+- A Python script will show the log with parameters (data range, origin, last N)
+
+Log structure:
+{
+    time: datetime
+    origin: string identifying the system component that originated this message
+    message: string
+}
+
+class itamarc.jdd.Logger {
+    logMessage()
+}
+
+Planned origins and respective messages:
+
+* Origin: GrabberJob
+- GrabberJob initiated.
+- Grabbing data from <online job service name>.
+- Notifying complete grab process for <online job service name>.
+- Message sent regarding data from <online job service name>.
+- GrabberJob end.
+
+* Origin: DataAnalyzer
+- DataAnalyzer started - message received regarding data from <online job service name>.
+- DataAnalyzer finished - Data from <online job service name> processed.
