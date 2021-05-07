@@ -8,3 +8,4 @@ The documentation was produced using Libre Office.
 
 To see the source code of the project, access these repositories:
 * [JobsDataDashboard-jddgrabber](https://github.com/itamarc/JobsDataDashboard-jddgrabber)
+* [JobsDataDashboard-jddlogfunc](https://github.com/itamarc/JobsDataDashboard-jddlogfunc)
