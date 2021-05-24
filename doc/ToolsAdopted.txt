@@ -1,7 +1,7 @@
 Here I will list the tools I'm using for each task in the project.
 This list will be updated each time I change a tool.
 
-To develop:
+For development:
 
 * For development in Python (version 3.9)
   - Visual Studio Code
@@ -9,13 +9,14 @@ To develop:
 
 * For code versioning
   - GitHub and GitHub Desktop
-  - Integration and unit tests with pytest triggered by GH Actions
+  - Integration and unit tests with pytest/JUnit triggered by GH Actions
   - plans to include CI/CD using GH Actions
 
 * Cloud services - AWS
   - Linux server with a cron job to grab data
-  - Serverless webservices (planned)
+  - Serverless webservices (Lambda functions)
   - MongoDB Atlas
+  - (TBD: web interface)
 
 For documentation:
 
