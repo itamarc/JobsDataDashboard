@@ -1,0 +1,49 @@
+name: Automatic GitHub Pages generation
+
+on:
+  # Trigger on page_build, as well as release created events
+  page_build:
+  release:
+    types:
+      - created
+  workflow_dispatch:
+jobs:
+  update-docs-on-gh-pages-branch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          # Adjust the depth as needed according to the files you want to copy
+          fetch-depth: 1
+      - name: Copy To Branches Action
+        uses: planetoftheweb/copy-to-branches@v1.1
+        env:
+          # The branch where the files will be copied from
+          key: 'main'
+          # The destination branch
+          branches: 'gh-pages'
+          # The files that will be copied with the relative path
+          files: 'README.md doc'
+  deploy-pages:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        # The branch where the templates are stored
+        # (if not present, uses the 'master' branch)
+        # (recomended: use the same branch configured to be used in GH Pages)
+        ref: 'gh-pages'
+    - uses: itamarc/action-itemplate-ghpages@v1
+      with:
+        templates_folder: ':light:'
+        pages_branch: 'gh-pages'
+        pages_folder: 'docs'
+        timezone: 'America/Sao_Paulo'
+        publish_readme_md: 'true'
+        content_to_copy: 'doc'
+        syntax_highlight_enable: 'true'
+        syntax_highlight_theme: 'default'
+        log_level: 'INFO'
+      env:
+        # Needed to publish the pages
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
