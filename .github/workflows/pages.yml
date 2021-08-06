@@ -33,7 +33,7 @@ jobs:
         # (if not present, uses the 'master' branch)
         # (recomended: use the same branch configured to be used in GH Pages)
         ref: 'gh-pages'
-    - uses: itamarc/action-itemplate-ghpages@v1
+    - uses: itamarc/action-itemplate-ghpages@v1test
       with:
         templates_folder: ':light:'
         pages_branch: 'gh-pages'
