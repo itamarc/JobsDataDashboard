@@ -10,9 +10,9 @@
    xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="297mm"
-   height="210mm"
-   viewBox="0 0 297 210"
+   width="236.67847mm"
+   height="177.35902mm"
+   viewBox="0 0 236.67847 177.35902"
    version="1.1"
    id="svg1688"
    inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
@@ -142,11 +142,11 @@
      pagecolor="#ffffff"
      bordercolor="#666666"
      borderopacity="1.0"
-     inkscape:pageopacity="0.0"
+     inkscape:pageopacity="1"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.0444742"
-     inkscape:cx="561.25984"
-     inkscape:cy="396.85039"
+     inkscape:zoom="1.2366982"
+     inkscape:cx="447.26639"
+     inkscape:cy="335.16666"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -156,7 +156,11 @@
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
      objecttolerance="1"
-     guidetolerance="1" />
+     guidetolerance="1"
+     fit-margin-top="5"
+     fit-margin-right="5"
+     fit-margin-bottom="5"
+     fit-margin-left="5" />
   <metadata
      id="metadata1685">
     <rdf:RDF>
@@ -173,7 +177,7 @@
      inkscape:label="Camada 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(0,-87)">
+     transform="translate(-25.939878,-100.54323)">
     <rect
        y="206.80035"
        x="30.939878"
@@ -196,7 +200,7 @@
        x="30.939878"
        y="138.06166" />
     <rect
-       style="opacity:1;fill:#fffebc;fill-opacity:1;stroke:#6b6b00;stroke-width:0.49999995;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:1.49999985,1.49999985;stroke-dashoffset:0;stroke-opacity:1"
+       style="opacity:1;fill:#fffebc;fill-opacity:1;stroke:#6b6b00;stroke-width:0.49999994;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:1.49999985, 1.49999985;stroke-dashoffset:0;stroke-opacity:1"
        id="rect815-0-6"
        width="47.218334"
        height="55.679127"
@@ -228,7 +232,7 @@
        y="143.6064"
        ry="8.8210697" />
     <rect
-       style="opacity:1;fill:#fffebc;fill-opacity:1;stroke:#6b6b00;stroke-width:0.50000001;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:1.50000004,1.50000004;stroke-dashoffset:0;stroke-opacity:1"
+       style="opacity:1;fill:#fffebc;fill-opacity:1;stroke:#6b6b00;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:1.50000004, 1.50000004;stroke-dashoffset:0;stroke-opacity:1"
        id="rect815-0-67"
        width="47.218334"
        height="55.679127"
@@ -311,13 +315,13 @@
          sodipodi:role="line">Web UI</tspan></text>
     <text
        id="text2298"
-       y="114.61846"
-       x="15.813182"
+       y="111.44347"
+       x="31.368986"
        style="font-style:normal;font-variant:normal;font-weight:700;font-size:8.45013046px;line-height:141.81143045%;font-family:'Linux Biolinum G';text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
        xml:space="preserve"><tspan
          id="tspan2292"
-         y="114.61846"
-         x="15.813182"
+         y="111.44347"
+         x="31.368986"
          sodipodi:role="line"
          style="stroke-width:0.26458332"><tspan
            id="tspan2290"
@@ -325,8 +329,8 @@
            dy="0"
            dx="0">Jobs Data Dashboard Project</tspan></tspan><tspan
          id="tspan2296"
-         y="126.60172"
-         x="15.813182"
+         y="123.42672"
+         x="31.368986"
          sodipodi:role="line"
          style="stroke-width:0.26458332"><tspan
            id="tspan2294"
