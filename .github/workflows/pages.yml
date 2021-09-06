@@ -41,9 +41,10 @@ jobs:
         timezone: 'America/Sao_Paulo'
         publish_readme_md: 'true'
         content_to_copy: 'doc'
+        convert_md_to_html: 'true'
         syntax_highlight_enable: 'true'
         syntax_highlight_theme: 'default'
-        log_level: 'INFO'
+        log_level: 'FINE'
       env:
         # Needed to publish the pages
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
