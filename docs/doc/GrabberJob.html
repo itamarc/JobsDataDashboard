@@ -1,0 +1,30 @@
+<html><head>
+<title>GrabberJob.md</title>
+</head><body>
+<h1>Grabber Job</h1>
+<p>The <code>GrabberJob</code> is the component made in Python to grab the data from the jobs
+online services.</p>
+<h2>Structure</h2>
+<p>The GrabberJob was made in Python with the following structure:</p>
+<p><img src="JDD-GrabberJobClassDiagram.svg" alt="GrabberJob class diagram" title="GrabberJob class diagram" /></p>
+<h2>Running the job</h2>
+<p>To run the GrabberJob in jddgrabber module in a Linux machine.</p>
+<p>You need to have a <code>~/config.yaml</code> file with all the right configurations for
+SQS and MongoDB.</p>
+<p>The code below can be put in a <code>runjob.sh</code> with proprer permissions
+(<code>chmod u+x runjob.sh</code>)</p>
+<pre><code class="language-bash"># Refresh the code from GitHub and copy configuration
+cd ~
+echo &quot;Removing old code in JobsDataDashboard-jddgrabber...&quot;
+rm -rf JobsDataDashboard-jddgrabber
+git clone https://github.com/itamarc/JobsDataDashboard-jddgrabber.git
+cp -v config.yaml JobsDataDashboard-jddgrabber/conf/
+
+# Run the code
+export PYTHONPATH=/home/ubuntu/JobsDataDashboard-jddgrabber/src/
+cd JobsDataDashboard-jddgrabber
+python3.9 -m pip install -r requirements.txt
+python3.9 ./src/jddgrabber/GrabberJob.py
+</code></pre>
+
+</body></html>

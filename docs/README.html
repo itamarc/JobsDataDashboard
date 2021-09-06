@@ -5,17 +5,112 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>itamarc/JobsDataDashboard README.md</title>
         <link rel="stylesheet" href="light.css">
-    </head>
+            <!-- Prism.js - Syntax highlighting -->
+        <link href="prism-default.css" rel="stylesheet" />
+</head>
     <body>
 <h1>Jobs Data Dashboard Project</h1>
 <p>My personal project to create a system with various technologies, just for knowledge.
 A jobs data system to grab data from several sources, compile them and shows it in a dashboard.</p>
 <p>This repository have only the project documentation.
 The documentation was produced using Libre Office.</p>
-<p>To see the source code of the project, access these repositories:</p>
+<p>Some documents about the project:</p>
 <ul>
-<li><a href="https://github.com/itamarc/JobsDataDashboard-jddgrabber">JobsDataDashboard-jddgrabber</a></li>
-<li><a href="https://github.com/itamarc/JobsDataDashboard-jddlogfunc">JobsDataDashboard-jddlogfunc</a></li>
+<li><a href="doc/Logging.html">Logging</a></li>
+<li><a href="doc/GrabberJob.html">Grabber Job</a></li>
 </ul>
-
-</body></html>
+<h2>Project Structure</h2>
+<p>Each component of the project will have a separate repository, with everything that the component needs to compile.
+The documentation will have its own repository.</p>
+<p><strong>List of repositories:</strong></p>
+<ul>
+<li>
+<p><a href="https://github.com/itamarc/JobsDataDashboard">JobsDataDashboard</a></p>
+<ul>
+<li><em>General documentation of the project (this repository).</em></li>
+</ul>
+</li>
+<li>
+<p><a href="https://github.com/itamarc/JobsDataDashboard-jddgrabber">JobsDataDashboard-jddgrabber</a></p>
+<ul>
+<li><em>Component made in Python to grab the data from the jobs online services.</em>
+<ul>
+<li>conf</li>
+<li>src</li>
+<li>test</li>
+<li>requirements.txt</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="https://github.com/itamarc/JobsDataDashboard-jddlogfunc">JobsDataDashboard-jddlogfunc</a></p>
+<ul>
+<li><em>Component made in Java to get the log messages out of a SQS queue and insert it into a Collection in MongoDB.</em>
+<em>It runs as an AWS Lambda function.</em>
+<ul>
+<li>src/main/java</li>
+<li>src/test/java</li>
+<li>pom.xml</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>JobsDataDashboard-jddwebui</p>
+<ul>
+<li><em>Component with the web user interface.</em></li>
+</ul>
+</li>
+</ul>
+<p><img src="doc/JDD-ComponentsOverview.svg" alt="Components overview diagram" title="Components overview" /></p>
+<h2>Tools adopted</h2>
+<p>Here I will list the tools I'm using for each task in the project.
+This list will be updated each time I change a tool.</p>
+<ul>
+<li>
+<p>For development in Python (version 3.9)</p>
+<ul>
+<li>Visual Studio Code</li>
+<li>libraries listed in <code>requirements.txt</code></li>
+</ul>
+</li>
+<li>
+<p>For development in Java 11</p>
+<ul>
+<li>Visual Studio Code</li>
+<li>Maven
+<ul>
+<li>dependencies listed in <code>pom.xml</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>For code versioning</p>
+<ul>
+<li>GitHub and GitHub Desktop</li>
+<li>Integration and unit tests with pytest/JUnit triggered by GH Actions</li>
+</ul>
+</li>
+<li>
+<p>Cloud services - AWS</p>
+<ul>
+<li>Linux server with a cron job to grab data</li>
+<li>Serverless webservices (Lambda functions)</li>
+<li>MongoDB Atlas</li>
+<li><em>(TBD: web interface)</em></li>
+</ul>
+</li>
+<li>
+<p>For documentation:</p>
+<ul>
+<li>Libre Office</li>
+<li>Inkscape SVG</li>
+</ul>
+</li>
+</ul>
+<p><img src="doc/JDD-TechnologyOverview.svg" alt="Technology overview diagram" title="Technology overview" /></p>
+<script src="prism.js"></script>
+</body>
+</html>
