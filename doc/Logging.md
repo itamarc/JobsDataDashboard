@@ -20,14 +20,14 @@ Planned origins and respective INFO level messages:
 
 * Origin: GrabberJob
 - GrabberJob initiated.
-- Grabbing data from <online job service name>.
-- Notifying complete grab process for <online job service name> - NNN records retrieved.
-- Message sent regarding data from <online job service name>.
+- Grabbing data from «online job service name».
+- Notifying complete grab process for «online job service name» - NNN records retrieved.
+- Message sent regarding data from «online job service name».
 - GrabberJob end.
 
 * Origin: DataAnalyzer
-- DataAnalyzer started - message received regarding data from <online job service name>.
-- DataAnalyzer finished - Data from <online job service name> processed.
+- DataAnalyzer started - message received regarding data from «online job service name».
+- DataAnalyzer finished - Data from «online job service name» processed.
 
 ![Logging system diagram](JDD-LoggingSystem.svg "Logging system diagram")
 
