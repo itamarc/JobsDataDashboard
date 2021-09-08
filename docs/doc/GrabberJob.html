@@ -1,6 +1,14 @@
-<html><head>
-<title>GrabberJob.md</title>
-</head><body>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>itamarc/JobsDataDashboard</title>
+        <link rel="stylesheet" href="light.css">
+            <!-- Prism.js - Syntax highlighting -->
+        <link href="prism-default.css" rel="stylesheet" />
+</head>
+    <body>
 <h1>Grabber Job</h1>
 <p>The <code>GrabberJob</code> is the component made in Python to grab the data from the jobs
 online services.</p>
@@ -26,5 +34,16 @@ cd JobsDataDashboard-jddgrabber
 python3.9 -m pip install -r requirements.txt
 python3.9 ./src/jddgrabber/GrabberJob.py
 </code></pre>
-
-</body></html>
+<script lang="javascript">
+    var title = '';
+    if(typeof document.getElementsByTagName("h1")[0] !== "undefined") {
+        title = document.getElementsByTagName("h1")[0].innerHTML;
+    } else {
+        var path = window.location.pathname;
+        title = path.split("/").pop();
+    }
+    document.getElementsByTagName("title")[0].innerHTML = title;
+</script>
+<script src="prism.js"></script>
+</body>
+</html>

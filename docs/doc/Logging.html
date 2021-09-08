@@ -1,6 +1,14 @@
-<html><head>
-<title>Logging.md</title>
-</head><body>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>itamarc/JobsDataDashboard</title>
+        <link rel="stylesheet" href="light.css">
+            <!-- Prism.js - Syntax highlighting -->
+        <link href="prism-default.css" rel="stylesheet" />
+</head>
+    <body>
 <p>The logging structure will be as described:</p>
 <ul>
 <li>It will be used the <a href="https://docs.python.org/3/library/logging.html">Python logging module</a>;</li>
@@ -23,19 +31,30 @@
 </ul>
 <ul>
 <li>GrabberJob initiated.</li>
-<li>Grabbing data from <online job service name>.</li>
-<li>Notifying complete grab process for <online job service name> - NNN records retrieved.</li>
-<li>Message sent regarding data from <online job service name>.</li>
+<li>Grabbing data from «online job service name».</li>
+<li>Notifying complete grab process for «online job service name» - NNN records retrieved.</li>
+<li>Message sent regarding data from «online job service name».</li>
 <li>GrabberJob end.</li>
 </ul>
 <ul>
 <li>Origin: DataAnalyzer</li>
 </ul>
 <ul>
-<li>DataAnalyzer started - message received regarding data from <online job service name>.</li>
-<li>DataAnalyzer finished - Data from <online job service name> processed.</li>
+<li>DataAnalyzer started - message received regarding data from «online job service name».</li>
+<li>DataAnalyzer finished - Data from «online job service name» processed.</li>
 </ul>
 <p><img src="JDD-LoggingSystem.svg" alt="Logging system diagram" title="Logging system diagram" /></p>
 <!-- References: -->
-
-</body></html>
+<script lang="javascript">
+    var title = '';
+    if(typeof document.getElementsByTagName("h1")[0] !== "undefined") {
+        title = document.getElementsByTagName("h1")[0].innerHTML;
+    } else {
+        var path = window.location.pathname;
+        title = path.split("/").pop();
+    }
+    document.getElementsByTagName("title")[0].innerHTML = title;
+</script>
+<script src="prism.js"></script>
+</body>
+</html>
