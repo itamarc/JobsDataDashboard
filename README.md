@@ -9,6 +9,7 @@ The documentation was produced using Libre Office.
 Some documents about the project:
 * [Logging](doc/Logging.md)
 * [Grabber Job](doc/GrabberJob.md)
+* [Web UI](doc/WebUI.md)
 
 ## Project Structure
 
