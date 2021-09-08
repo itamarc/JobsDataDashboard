@@ -1,11 +1,18 @@
 name: Automatic GitHub Pages generation
 
 on:
-  # Trigger on page_build, as well as release created events
+  # Trigger on page_build, as well as release, fork, push, watch and issues events
   page_build:
   release:
+  fork:
+  push:
+  watch:
+  issues:
     types:
-      - created
+      - opened
+      - closed
+      - edited
+      - deleted
   workflow_dispatch:
 jobs:
   update-docs-on-gh-pages-branch:
@@ -44,7 +51,7 @@ jobs:
         convert_md_to_html: 'true'
         syntax_highlight_enable: 'true'
         syntax_highlight_theme: 'default'
-        log_level: 'FINE'
+        log_level: 'FINER'
       env:
         # Needed to publish the pages
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
