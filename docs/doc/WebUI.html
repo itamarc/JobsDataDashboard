@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>itamarc/JobsDataDashboard</title>
+        <link rel="stylesheet" href="light.css">
+            <!-- Prism.js - Syntax highlighting -->
+        <link href="https://itamarc.github.io/JobsDataDashboard/prism-default.css" rel="stylesheet" />
+</head>
+    <body>
+<h1>Web UI</h1>
+<p>The Web UI will be build using Plotly Dash.</p>
+<p>The idea is to have this UI in a Docker container running in AWS Lambda, using the AWS API Gateway.</p>
+<p>The services that will get the data from the database will be running in AWS Lambda also, with a GraphQL API.</p>
+<p>Below are the screens that will be available in the Web UI and some sample SQL queries to get the data:</p>
+<h2>Job Opportunities by Location</h2>
+<p><img src="JDD-WebUI-JobsOpportByLoc.svg" alt="Job Opportunities by Location" title="Graph 1" /></p>
+<p><strong>Query:</strong></p>
+<pre><code class="language-sql">SELECT job_title, country, sum(num_job_offers) AS opps
+FROM jobs_table_1
+WHERE date BETWEEN period_ini AND period_end
+GROUP BY job_title, country
+</code></pre>
+<h2>Job Opportunities by Job Title</h2>
+<p><strong>[image pending]</strong></p>
+<p><strong>Query:</strong></p>
+<pre><code class="language-sql">SELECT job_title, 
+SUM(num_job_offers) AS offers
+FROM jobs_table_2
+WHERE date BETWEEN period_ini AND period_end
+[AND country = ‘NL’]
+GROUP BY job_title
+ORDER BY offers DESC
+</code></pre>
+<ul>
+<li>‘country’ can be “All”</li>
+</ul>
+<h2>Average Salary by Location</h2>
+<p><img src="JDD-WebUI-AvgSalByLoc.svg" alt="Average Salary by Location" title="Graph 3" /></p>
+<p><strong>Query:</strong></p>
+<pre><code class="language-sql">SELECT country, avg(avg_salary) as sal
+FROM jobs_table_3
+WHERE date BETWEEN period_ini AND period_end
+AND job_title = ‘Software Engineer’
+AND avg_salary IS NOT NULL
+GROUP BY country
+</code></pre>
+<h2>Average Salary by Job Title</h2>
+<p><strong>[image pending]</strong></p>
+<p><strong>Query:</strong></p>
+<pre><code class="language-sql">SELECT job_title, 
+AVG(min_salary) AS avg_min,
+AVG(avg_salary) AS avg_sal,
+AVG(max_salary) AS avg_max,
+FROM jobs_table_4
+WHERE date BETWEEN period_ini AND period_end
+[AND country = ‘NL’]
+AND avg_salary IS NOT NULL
+GROUP BY job_title
+ORDER BY avg_sal DESC
+</code></pre>
+<ul>
+<li>‘country’ can be “All”</li>
+</ul>
+<h2>Prevalent Job Opportunities by Location</h2>
+<p><strong>[image pending]</strong></p>
+<p><strong>Query:</strong></p>
+<pre><code class="language-sql">SELECT job_title, state,
+SUM(num_job_offers) AS offers
+FROM jobs_table_5
+WHERE date BETWEEN period_ini AND period_end
+GROUP BY job_title, state
+ORDER BY offers DESC
+</code></pre>
+<ul>
+<li>needs to be improved, in order to bring only the biggest ‘offers’ in each state</li>
+</ul>
+<h2>Data definition</h2>
+<pre><code class="language-sql">CREATE TABLE jobs (
+    job_title VARCHAR(255),
+    country CHAR(2),
+    state CHAR(2),
+    city VARCHAR(255),
+    num_offers INTEGER,
+    grabbed_at DATE,
+    min_salary DECIMAL,
+    avg_salary DECIMAL,
+    max_salary DECIMAL,
+    jdd_run_id CHAR(14),
+    origin VARCHAR(30)
+)
+</code></pre>
+<pre><code>jdd_run_id:
+%Y  %m%d%H%M%S
+20210612163145
+</code></pre>
+<pre><code>origin:
+themuse
+</code></pre>
+<script lang="javascript">
+    var title = '';
+    if(typeof document.getElementsByTagName("h1")[0] !== "undefined") {
+        title = document.getElementsByTagName("h1")[0].innerHTML;
+    } else {
+        var path = window.location.pathname;
+        title = path.split("/").pop();
+    }
+    document.getElementsByTagName("title")[0].innerHTML = title;
+</script>
+<script src="https://itamarc.github.io/JobsDataDashboard/prism.js"></script>
+</body>
+</html>
