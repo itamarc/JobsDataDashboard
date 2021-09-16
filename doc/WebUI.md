@@ -23,7 +23,7 @@ GROUP BY job_title, country
 
 ## Job Opportunities by Job Title
 
-**[image pending]**
+:warning: **[image pending]**
 
 **Query:**
 
@@ -56,7 +56,7 @@ GROUP BY country
 
 ## Average Salary by Job Title
 
-**[image pending]**
+:warning: **[image pending]**
 
 **Query:**
 
@@ -77,7 +77,7 @@ ORDER BY avg_sal DESC
 
 ## Prevalent Job Opportunities by Location
 
-**[image pending]**
+![Prevalent Job Opportunity by Location](JDD-WebUI-PrevJobOpportByLoc.svg "Graph 5")
 
 **Query:**
 
