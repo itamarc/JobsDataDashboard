@@ -23,7 +23,7 @@ WHERE date BETWEEN period_ini AND period_end
 GROUP BY job_title, country
 </code></pre>
 <h2>Job Opportunities by Job Title</h2>
-<p><img src="https://github.githubassets.com/images/icons/emoji/unicode/26a0.png?v7" alt="emoji places:warning" height="20" width="20" align="absmiddle" /> <strong>[image pending]</strong></p>
+<p><img src="JDD-WebUI-JobsOpportByTitle.svg" alt="Job Opportunities by Job Title" title="Graph 2" /></p>
 <p><strong>Query:</strong></p>
 <pre><code class="language-sql">SELECT job_title, 
 SUM(num_job_offers) AS offers
@@ -36,7 +36,7 @@ ORDER BY offers DESC
 <ul>
 <li>‘country’ can be “All”</li>
 </ul>
-<h2>Average Salary by Location</h2>
+<h2>Average Salary per Year by Location</h2>
 <p><img src="JDD-WebUI-AvgSalByLoc.svg" alt="Average Salary by Location" title="Graph 3" /></p>
 <p><strong>Query:</strong></p>
 <pre><code class="language-sql">SELECT country, avg(avg_salary) as sal
@@ -46,8 +46,8 @@ AND job_title = ‘Software Engineer’
 AND avg_salary IS NOT NULL
 GROUP BY country
 </code></pre>
-<h2>Average Salary by Job Title</h2>
-<p><img src="https://github.githubassets.com/images/icons/emoji/unicode/26a0.png?v7" alt="emoji places:warning" height="20" width="20" align="absmiddle" /> <strong>[image pending]</strong></p>
+<h2>Average Salary per Year by Job Title</h2>
+<p><img src="JDD-WebUI-AvgSalByTitle.svg" alt="Average Salary by Job Title" title="Graph 4" /></p>
 <p><strong>Query:</strong></p>
 <pre><code class="language-sql">SELECT job_title, 
 AVG(min_salary) AS avg_min,
