@@ -66,7 +66,7 @@ This list will be updated each time I change a tool.
 
 * For documentation:
 
-  - Libre Office
+  - Markdown
   - Inkscape SVG
 
 ![Technology overview diagram](doc/JDD-TechnologyOverview.svg "Technology overview")
