@@ -23,7 +23,7 @@ GROUP BY job_title, country
 
 ## Job Opportunities by Job Title
 
-:warning: **[image pending]**
+![Job Opportunities by Job Title](JDD-WebUI-JobsOpportByTitle.svg "Graph 2")
 
 **Query:**
 
@@ -39,7 +39,7 @@ ORDER BY offers DESC
 
 * ‘country’ can be “All”
 
-## Average Salary by Location
+## Average Salary per Year by Location
 
 ![Average Salary by Location](JDD-WebUI-AvgSalByLoc.svg "Graph 3")
 
@@ -54,9 +54,9 @@ AND avg_salary IS NOT NULL
 GROUP BY country
 ```
 
-## Average Salary by Job Title
+## Average Salary per Year by Job Title
 
-:warning: **[image pending]**
+![Average Salary by Job Title](JDD-WebUI-AvgSalByTitle.svg "Graph 4")
 
 **Query:**
 
