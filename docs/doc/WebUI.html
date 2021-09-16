@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>itamarc/JobsDataDashboard</title>
-        <link rel="stylesheet" href="light.css">
+        <link rel="stylesheet" href="https://itamarc.github.io/JobsDataDashboard/light.css">
             <!-- Prism.js - Syntax highlighting -->
         <link href="https://itamarc.github.io/JobsDataDashboard/prism-default.css" rel="stylesheet" />
 </head>
@@ -23,7 +23,7 @@ WHERE date BETWEEN period_ini AND period_end
 GROUP BY job_title, country
 </code></pre>
 <h2>Job Opportunities by Job Title</h2>
-<p><strong>[image pending]</strong></p>
+<p><img src="https://github.githubassets.com/images/icons/emoji/unicode/26a0.png?v7" alt="emoji places:warning" height="20" width="20" align="absmiddle" /> <strong>[image pending]</strong></p>
 <p><strong>Query:</strong></p>
 <pre><code class="language-sql">SELECT job_title, 
 SUM(num_job_offers) AS offers
@@ -47,7 +47,7 @@ AND avg_salary IS NOT NULL
 GROUP BY country
 </code></pre>
 <h2>Average Salary by Job Title</h2>
-<p><strong>[image pending]</strong></p>
+<p><img src="https://github.githubassets.com/images/icons/emoji/unicode/26a0.png?v7" alt="emoji places:warning" height="20" width="20" align="absmiddle" /> <strong>[image pending]</strong></p>
 <p><strong>Query:</strong></p>
 <pre><code class="language-sql">SELECT job_title, 
 AVG(min_salary) AS avg_min,
@@ -64,7 +64,7 @@ ORDER BY avg_sal DESC
 <li>‘country’ can be “All”</li>
 </ul>
 <h2>Prevalent Job Opportunities by Location</h2>
-<p><strong>[image pending]</strong></p>
+<p><img src="JDD-WebUI-PrevJobOpportByLoc.svg" alt="Prevalent Job Opportunity by Location" title="Graph 5" /></p>
 <p><strong>Query:</strong></p>
 <pre><code class="language-sql">SELECT job_title, state,
 SUM(num_job_offers) AS offers
