@@ -9,12 +9,12 @@
         <link href="https://itamarc.github.io/JobsDataDashboard/prism-default.css" rel="stylesheet" />
 </head>
     <body>
-<h1>Web UI</h1>
+<h1><a href="#web-ui" id="web-ui"></a>Web UI</h1>
 <p>The Web UI will be build using Plotly Dash.</p>
 <p>The idea is to have this UI in a Docker container running in AWS Lambda, using the AWS API Gateway.</p>
 <p>The services that will get the data from the database will be running in AWS Lambda also, with a GraphQL API.</p>
 <p>Below are the screens that will be available in the Web UI and some sample SQL queries to get the data:</p>
-<h2>Job Opportunities by Location</h2>
+<h2><a href="#job-opportunities-by-location" id="job-opportunities-by-location"></a>Job Opportunities by Location</h2>
 <p><img src="JDD-WebUI-JobsOpportByLoc.svg" alt="Job Opportunities by Location" title="Graph 1" /></p>
 <p><strong>Query:</strong></p>
 <pre><code class="language-sql">SELECT job_title, country, sum(num_job_offers) AS opps
@@ -22,7 +22,7 @@ FROM jobs_table_1
 WHERE date BETWEEN period_ini AND period_end
 GROUP BY job_title, country
 </code></pre>
-<h2>Job Opportunities by Job Title</h2>
+<h2><a href="#job-opportunities-by-job-title" id="job-opportunities-by-job-title"></a>Job Opportunities by Job Title</h2>
 <p><img src="JDD-WebUI-JobsOpportByTitle.svg" alt="Job Opportunities by Job Title" title="Graph 2" /></p>
 <p><strong>Query:</strong></p>
 <pre><code class="language-sql">SELECT job_title, 
@@ -36,7 +36,7 @@ ORDER BY offers DESC
 <ul>
 <li>‘country’ can be “All”</li>
 </ul>
-<h2>Average Salary per Year by Location</h2>
+<h2><a href="#average-salary-per-year-by-location" id="average-salary-per-year-by-location"></a>Average Salary per Year by Location</h2>
 <p><img src="JDD-WebUI-AvgSalByLoc.svg" alt="Average Salary by Location" title="Graph 3" /></p>
 <p><strong>Query:</strong></p>
 <pre><code class="language-sql">SELECT country, avg(avg_salary) as sal
@@ -46,7 +46,7 @@ AND job_title = ‘Software Engineer’
 AND avg_salary IS NOT NULL
 GROUP BY country
 </code></pre>
-<h2>Average Salary per Year by Job Title</h2>
+<h2><a href="#average-salary-per-year-by-job-title" id="average-salary-per-year-by-job-title"></a>Average Salary per Year by Job Title</h2>
 <p><img src="JDD-WebUI-AvgSalByTitle.svg" alt="Average Salary by Job Title" title="Graph 4" /></p>
 <p><strong>Query:</strong></p>
 <pre><code class="language-sql">SELECT job_title, 
@@ -63,7 +63,7 @@ ORDER BY avg_sal DESC
 <ul>
 <li>‘country’ can be “All”</li>
 </ul>
-<h2>Prevalent Job Opportunities by Location</h2>
+<h2><a href="#prevalent-job-opportunities-by-location" id="prevalent-job-opportunities-by-location"></a>Prevalent Job Opportunities by Location</h2>
 <p><img src="JDD-WebUI-PrevJobOpportByLoc.svg" alt="Prevalent Job Opportunity by Location" title="Graph 5" /></p>
 <p><strong>Query:</strong></p>
 <pre><code class="language-sql">SELECT job_title, state,
@@ -76,7 +76,7 @@ ORDER BY offers DESC
 <ul>
 <li>needs to be improved, in order to bring only the biggest ‘offers’ in each state</li>
 </ul>
-<h2>Data definition</h2>
+<h2><a href="#data-definition" id="data-definition"></a>Data definition</h2>
 <pre><code class="language-sql">CREATE TABLE jobs (
     job_title VARCHAR(255),
     country CHAR(2),
