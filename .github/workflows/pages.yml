@@ -42,7 +42,7 @@ jobs:
         ref: 'gh-pages'
     - uses: itamarc/action-itemplate-ghpages@v1
       with:
-        templates_folder: ':light:'
+        templates_folder: ':greenish:'
         pages_branch: 'gh-pages'
         pages_folder: 'docs'
         timezone: 'America/Sao_Paulo'
